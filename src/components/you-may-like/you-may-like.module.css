@@ -1,0 +1,21 @@
+.section{
+    margin: 160px 0;
+}
+.cardSection{
+    display: flex;
+
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card img{
+    width: 100%;
+    max-width: 100%;
+}
+.h3{
+    
+   
+}

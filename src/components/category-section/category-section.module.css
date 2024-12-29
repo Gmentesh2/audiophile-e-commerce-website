@@ -1,0 +1,12 @@
+.section{
+    background-color: black;
+    color: var(--color-text-two);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 240px;
+}
+.h{
+    font-weight: bold;
+    font-size: 40px;
+}

@@ -1,0 +1,31 @@
+.navbar {
+  background-color: black;
+  color: white;
+}
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.links a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-text-two);
+}
+.links {
+  display: flex;
+  gap: 10px;
+}
+.cart {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}

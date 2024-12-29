@@ -1,0 +1,16 @@
+.section{
+    margin: 50px 0;
+}
+.infoContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 125px;
+}
+.img{ 
+    width: 540px;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}

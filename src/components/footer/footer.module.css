@@ -1,0 +1,11 @@
+.footer {
+    background: black;
+    color: white;
+    padding: 75px 0 48px;
+}
+
+.footerContainer {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.hero {
+  background-color: black;
+  color: white;
+}
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.hero img {
+  max-width: 100%;
+}

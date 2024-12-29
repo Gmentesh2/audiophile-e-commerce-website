@@ -1,0 +1,21 @@
+.btnContainer {
+  display: flex;
+  color: black;
+  padding: 15px;
+  gap: 21px;
+}
+.btnContainer button {
+  border: none;
+  width: 20px 18px;
+  background: transparent;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btnContainer span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px 18px;
+}
