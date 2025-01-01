@@ -1,0 +1,19 @@
+.img{
+    width: 64px;
+    border-radius: 8px;
+    margin-right: 16px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.left{
+    display: flex !important;
+    align-items: center;
+    margin-right: auto;
+
+}
+.info{
+    margin-right: auto;
+}

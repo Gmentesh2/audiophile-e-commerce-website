@@ -2,8 +2,8 @@ import { createContext, Dispatch, SetStateAction, useState } from "react";
 import { Product } from "../pages/Products";
 
 export type ContextType = {
-  selectedProducts: SelectedItem[] | undefined;
-  setSelectedProducts: Dispatch<SetStateAction<SelectedItem[]>>;
+  selectedItems: SelectedItem[] | undefined;
+  setSelectedItems: Dispatch<SetStateAction<SelectedItem[]>>;
 };
 export const SelectedProductsContext = createContext<ContextType | null>(null);
 
@@ -17,13 +17,13 @@ export type SelectedItem = {
 };
 
 const SelectedProductsContextProvider = ({ children }: Props) => {
-  const [selectedProducts, setSelectedProducts] = useState<SelectedItem[]>([]);
+  const [selectedItems, setSelectedItems] = useState<SelectedItem[]>([]);
 
   return (
     <SelectedProductsContext.Provider
       value={{
-        selectedProducts,
-        setSelectedProducts,
+        selectedItems,
+        setSelectedItems,
       }}
     >
       {children}
