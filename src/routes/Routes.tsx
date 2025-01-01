@@ -1,9 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Checkout from "../pages/Checkout";
-import Products from "../pages/Products";
-import SingleProduct from "../pages/SingleProduct";
+
+import Checkout from "../pages/checkout/Checkout";
+import Products from "../pages/products/Products";
+import SingleProduct from "../pages/single-product/SingleProduct";
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/home/Home";
 
 const RoutesConfig = () => {
   return (

@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Product } from "./Products";
-import ProductInfo from "../components/product-info/ProductInfo";
-import ThumbnailSection from "../components/thumbnail-section/ThumbnailSection";
-import YouMayLike from "../components/you-may-like/YouMayLike";
+import { Product } from "../products/Products";
+import ProductInfo from "../../components/product-info/ProductInfo";
+import ThumbnailSection from "../../components/thumbnail-section/ThumbnailSection";
+import YouMayLike from "../../components/you-may-like/YouMayLike";
 
 const SingleProduct = () => {
   const [product, setProduct] = useState<null | Product>(null);

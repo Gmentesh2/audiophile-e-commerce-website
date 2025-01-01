@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useEffect, useState } from "react";
-import { Product } from "../../pages/Products";
+import { Product } from "../../pages/products/Products";
 
 import styles from "./product-info.module.css";
 import ProductBtn from "../product-btn/ProductBtn";

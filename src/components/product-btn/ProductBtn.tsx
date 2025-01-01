@@ -5,7 +5,7 @@ import {
   SelectedProductsContext,
 } from "../../context/SelectedProductsContext";
 import styles from "./product-btn.module.css";
-import { Product } from "../../pages/Products";
+import { Product } from "../../pages/products/Products";
 
 type Props = {
   product: Product | null;

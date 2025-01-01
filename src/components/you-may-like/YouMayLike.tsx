@@ -1,4 +1,4 @@
-import { Product } from "../../pages/Products";
+import { Product } from "../../pages/products/Products";
 import styles from "./you-may-like.module.css";
 type Props = {
   product: null | Product;

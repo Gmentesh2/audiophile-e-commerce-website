@@ -2,9 +2,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductCard from "../components/product-card/ProductCard";
-import CategorySection from "../components/category-section/CategorySection";
-import ThumbnailSection from "../components/thumbnail-section/ThumbnailSection";
+import ProductCard from "../../components/product-card/ProductCard";
+import CategorySection from "../../components/category-section/CategorySection";
+import ThumbnailSection from "../../components/thumbnail-section/ThumbnailSection";
 
 export type Product = {
   id: string;

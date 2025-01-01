@@ -1,5 +1,5 @@
 import { createContext, Dispatch, SetStateAction, useState } from "react";
-import { Product } from "../pages/Products";
+import { Product } from "../pages/products/Products";
 
 export type ContextType = {
   selectedItems: SelectedItem[] | undefined;

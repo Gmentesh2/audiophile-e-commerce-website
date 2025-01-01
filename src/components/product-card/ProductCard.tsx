@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Product } from "../../pages/Products";
+import { Product } from "../../pages/products/Products";
 import styles from "./product-card.module.css";
 
 type Props = {
