@@ -3,13 +3,14 @@ import { SelectedProductsContext } from "../../context/SelectedProductsContext";
 import ProductBtn from "../product-btn/ProductBtn";
 import { useNavigate } from "react-router-dom";
 import styles from "./cart-content.module.css";
+import ProductPreview from "../product-preview/ProductPreview";
 
 type Props = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 const CartContent = ({ setIsOpen }: Props) => {
   const context = useContext(SelectedProductsContext);
-  console.log(context?.selectedItems);
+  //console.log(context?.selectedItems);
   const navigate = useNavigate();
 
   const removeAll = () => {
@@ -33,18 +34,8 @@ const CartContent = ({ setIsOpen }: Props) => {
         {(context?.selectedItems || []).map((item) => {
           return (
             <section className={styles.row} key={item.product.id}>
-              <div className={styles.left}>
-                <img
-                  className={styles.img}
-                  src={`/${item.product.image.desktop}`}
-                  alt=""
-                />
-                <div className={styles.info}>
-                  <p>{item.product.name.split(" ")[0]}</p>
-                  <p>$ {item.product.price}</p>
-                </div>
-              </div>
-
+     
+              <ProductPreview product={item.product} />
               <ProductBtn product={item.product} count={item.amount} size="small" />
             </section>
           );

@@ -1,0 +1,45 @@
+.form {
+  background-color: white;
+  padding: 54px 48px;
+  border-radius: 8px;
+  flex-grow: 2.5;
+ 
+  width: 0;
+}
+.form h1 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+}
+.inputHeading {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.93px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+.inputSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 24px;
+  margin-bottom: 53px;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cashDelivery {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.cashDelivery img {
+  width: 48px;
+}
+.cashDelivery p {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}

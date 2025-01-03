@@ -1,0 +1,12 @@
+.main {
+    background-color: var(--color-bg-1);
+    padding: 10px 0;
+    padding-top: 50px;
+ 
+}
+.checkoutContainer{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 140px;
+    margin-top: 38px;
+}

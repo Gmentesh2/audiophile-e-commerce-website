@@ -8,7 +8,7 @@ import CartContent from "../cart-content/CartContent";
 
 const customStyles = {
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.46)',
+    backgroundColor: 'rgba(0, 0, 0, 0.50)',
     padding: "20px"
   },
   content: {

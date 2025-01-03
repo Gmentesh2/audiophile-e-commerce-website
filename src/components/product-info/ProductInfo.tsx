@@ -96,13 +96,26 @@ const ProductInfo = ({ product }: Props) => {
           <p className={styles.p}>{product?.description}</p>
           <h3>$ {product?.price}</h3>
           <div>
-            <ProductBtn product={product} count={count} setCount={setCount} />
-            <button onClick={addToCart}
-            disabled={count === item?.amount}
-            style={{
-              background: count === item?.amount ? "var(--color-secondary)" : "var(--color-primary)",
-              cursor: count === item?.amount ? "default" : "pointer"
-            }} >Add to cart</button>
+            <ProductBtn
+              product={product}
+              count={count}
+              setCount={setCount}
+              size="medium"
+            />
+            <button
+              onClick={addToCart}
+              disabled={count === item?.amount}
+              style={{
+                background:
+                  count === item?.amount
+                    ? "var(--color-secondary)"
+                    : "var(--color-primary)",
+                cursor: count === item?.amount ? "default" : "pointer",
+              }}
+              className="btn"
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </div>
