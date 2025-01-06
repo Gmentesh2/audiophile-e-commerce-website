@@ -63,6 +63,8 @@ const Products = () => {
     getProducts();
   }, []);
 
+  
+
   return (
     <div>
       <CategorySection category={params.category} />

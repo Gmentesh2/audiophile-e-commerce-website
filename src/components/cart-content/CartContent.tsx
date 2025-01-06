@@ -24,19 +24,26 @@ const CartContent = ({ setIsOpen }: Props) => {
     return totalPrice;
   };
 
+  if (context?.selectedItems?.length === 0) {
+    return <h2>No Products Selected</h2>;
+  }
+
   return (
     <div>
       <header>
         <h2>CART ({context?.selectedItems?.length})</h2>
         <button onClick={removeAll}>Remove All</button>
       </header>
-      <div style={{margin: "10px 0"}}>
+      <div>
         {(context?.selectedItems || []).map((item) => {
           return (
             <section className={styles.row} key={item.product.id}>
-     
               <ProductPreview product={item.product} />
-              <ProductBtn product={item.product} count={item.amount} size="small" />
+              <ProductBtn
+                product={item.product}
+                count={item.amount}
+                size="small"
+              />
             </section>
           );
         })}

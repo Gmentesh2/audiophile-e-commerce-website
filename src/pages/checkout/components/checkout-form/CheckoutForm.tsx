@@ -1,44 +1,113 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-empty-object-type */
 /* eslint-disable no-empty-pattern */
 import RadioInput from "../../../../components/radio-input/RadioInput";
 import styles from "./checkout-form.module.css";
 import iconCash from "../../../../assets/checkout/icon-cash-on-delivery.svg";
 import { useState } from "react";
-type Props = {};
+import { FieldErrors, UseFormRegister } from "react-hook-form";
 
-const CheckoutForm = ({}: Props) => {
+type Props = {
+  register: UseFormRegister<{
+    name: string;
+    email: string;
+    phoneNumber: string;
+    address: string;
+    zipCode: string;
+    city: string;
+    country: string;
+  }>;
+  errors: FieldErrors<FormData>;
+};
+
+const CheckoutForm = ({ register, errors }: Props) => {
   const [paymentMethod, setPaymentMethod] = useState<"e-money" | "cash">(
     "e-money"
   );
-
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return (
-    <form className={styles.form}>
+    <div className={styles.form}>
       <h1>CHECKOUT</h1>
       <h3 className={styles.inputHeading}>Billing Details</h3>
       <section className={styles.inputSection}>
         <div className={styles.inputContainer}>
-          <label className="label" htmlFor="name">
+          <label
+            style={{
+              color: errors?.name?.message ? "var(--color-error)" : "",
+            }}
+            className="label"
+            htmlFor="name"
+          >
             Name
           </label>
           <input
+            {...register("name", {
+              required: {
+                value: true,
+                message: "Name is required",
+              },
+              minLength: {
+                value: 3,
+                message: "Name must be at least 3 characters long",
+              },
+              maxLength: {
+                value: 30,
+                message: "Name must be at most 30 characters long",
+              },
+            })}
             className="input"
+            style={{
+              borderColor: errors?.name?.message ? "var(--color-error)" : "",
+            }}
             type="text"
-            name=""
+            name="name"
             id="name"
             placeholder="Alexei ward"
           />
+          <p className={styles.errorText}>{errors?.name?.message}</p>
         </div>
         <div className={styles.inputContainer}>
-          <label className="label" htmlFor="email">
+          <label
+            style={{
+              color: errors?.email?.message ? "var(--color-error)" : "",
+            }}
+            className="label"
+            htmlFor="email"
+          >
             Email Address
           </label>
-          <input className="input" type="text" name="" id="email" />
+          <input
+            {...register("email", {
+              required: {
+                value: true,
+                message: "Email your email",
+              },
+              pattern: {
+                value: emailRegex,
+                message: "wrong format",
+              },
+            })}
+            className="input"
+            type="text"
+            name="email"
+            id="email"
+            style={{
+              borderColor: errors?.email?.message ? "var(--color-error)" : "",
+            }}
+          />
+          <p className={styles.errorText}>{errors.email?.message}</p>
         </div>
         <div className={styles.inputContainer}>
           <label className="label" htmlFor="phone-number">
             Phone Number
           </label>
-          <input className="input" type="text" name="" id="phone-number" />
+          <input
+            {...register("phoneNumber")}
+            className="input"
+            type="text"
+            name=""
+            id="phone-number"
+          />
         </div>
       </section>
       {""}
@@ -49,6 +118,7 @@ const CheckoutForm = ({}: Props) => {
             Address
           </label>
           <input
+            {...register("address")}
             className="input"
             type="text"
             name=""
@@ -60,19 +130,37 @@ const CheckoutForm = ({}: Props) => {
           <label className="label" htmlFor="zip-code">
             Zip Code
           </label>
-          <input className="input" type="text" name="" id="zip-code" />
+          <input
+            {...register("zipCode")}
+            className="input"
+            type="text"
+            name=""
+            id="zip-code"
+          />
         </div>
         <div className={styles.inputContainer}>
           <label className="label" htmlFor="city">
             City
           </label>
-          <input className="input" type="text" name="" id="city" />
+          <input
+            {...register("city")}
+            className="input"
+            type="text"
+            name=""
+            id="city"
+          />
         </div>
         <div className={styles.inputContainer}>
           <label className="label" htmlFor="country">
             Country
           </label>
-          <input className="input" type="text" name="" id="country" />
+          <input
+            {...register("country")}
+            className="input"
+            type="text"
+            name=""
+            id="country"
+          />
         </div>
       </section>
 
@@ -97,7 +185,7 @@ const CheckoutForm = ({}: Props) => {
       </section>
       {/*e-money input */}
       {paymentMethod === "e-money" && (
-        <section className={styles.inputSection} style={{marginBottom: "0"}}>
+        <section className={styles.inputSection} style={{ marginBottom: "0" }}>
           <div className={styles.inputContainer}>
             <label className="label" htmlFor="e-money-number">
               e-Money Number
@@ -134,7 +222,7 @@ const CheckoutForm = ({}: Props) => {
           </p>
         </section>
       )}
-    </form>
+    </div>
   );
 };
 

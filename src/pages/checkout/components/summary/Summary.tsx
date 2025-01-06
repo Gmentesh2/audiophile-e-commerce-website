@@ -8,6 +8,30 @@ type Props = {
 
 const Summary = ({ setIsOpen }: Props) => {
   const context = useContext(SelectedProductsContext);
+
+  const findTotalPrice = () => {
+    let totalPrice = 0;
+    context?.selectedItems?.forEach((item) => {
+      totalPrice += item.product.price * item.amount;
+    });
+    return totalPrice;
+  };
+  const costs = {
+    shipping: 10,
+    VAT: 5,
+  };
+  const findGrandTotalPrice = ({
+    totalPrice,
+    shipping,
+    vat,
+  }: {
+    totalPrice: number;
+    shipping: number;
+    vat: number;
+  }) => {
+    return totalPrice + shipping + vat;
+  };
+
   return (
     <div className={styles.summary}>
       <h2>Summary</h2>
@@ -25,26 +49,39 @@ const Summary = ({ setIsOpen }: Props) => {
       <ul className={styles.list}>
         <li className={styles.li}>
           <span className={styles.label}>TOTAL</span>
-          <span className={styles.value}>$5396</span>
+          <span className={styles.value}>$ {findTotalPrice()}</span>
         </li>
         <li className={styles.li}>
           <span className={styles.label}>SHIPPING</span>
-          <span className={styles.value}>$5396</span>
+          <span className={styles.value}>${costs.shipping}</span>
         </li>
         <li className={styles.li}>
           <span className={styles.label}>VAT (INCLUDED)</span>
-          <span className={styles.value}>$5396</span>
+          <span className={styles.value}>${costs.VAT}</span>
         </li>
         <li className={styles.li}>
           <span className={styles.label}>GRAND TOTAL</span>
-          <span className={styles.value}>$5396</span>
+          <span className={styles.value}>
+            $
+            {findGrandTotalPrice({
+              totalPrice: findTotalPrice(),
+              shipping: costs.shipping,
+              vat: costs.VAT,
+            })}
+          </span>
         </li>
       </ul>
       <button
         className={`btn ${styles.summaryBtn}`}
         onClick={() => {
-          setIsOpen(true);
+          if (
+            context?.selectedItems?.length &&
+            context?.selectedItems.length > 0
+          ) {
+            setIsOpen(true);
+          }
         }}
+        type="submit"
       >
         CONTINUE
       </button>

@@ -25,6 +25,7 @@ const ProductInfo = ({ product }: Props) => {
       setCount(item?.amount);
     }
   }, [item?.amount]);
+  //add to cart 
   const addToCart = () => {
     if (count === 0) {
       // delete product
