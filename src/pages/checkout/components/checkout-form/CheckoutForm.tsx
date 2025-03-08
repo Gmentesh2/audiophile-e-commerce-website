@@ -6,6 +6,7 @@ import styles from "./checkout-form.module.css";
 import iconCash from "../../../../assets/checkout/icon-cash-on-delivery.svg";
 import { useState } from "react";
 import { FieldErrors, UseFormRegister } from "react-hook-form";
+import { FormData } from "../../Checkout";
 
 type Props = {
   register: UseFormRegister<{

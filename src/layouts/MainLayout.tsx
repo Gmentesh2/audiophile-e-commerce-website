@@ -5,10 +5,8 @@ import Navbar from "../components/navbar/Navbar";
 
 const MainLayout = () => {
   const location = useLocation();
-  //console.log(location);
 
   const isCheckoutPage = location.pathname.includes("checkout");
-  //console.log({ isCheckoutPage });
 
   return (
     <>

@@ -6,7 +6,7 @@ import CheckoutModal from "./components/checkout-modal/CheckoutModal";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   phoneNumber: string;
@@ -36,6 +36,7 @@ const Checkout = () => {
   });
   const onSubmit = (data: FormData) => {
     console.log(data);
+    setIsOpen(true)
   };
   console.log(errors);
   return (

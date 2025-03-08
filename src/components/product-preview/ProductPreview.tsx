@@ -10,13 +10,13 @@ const ProductPreview = ({product, imgSize = 64} : Props) => {
     <div className={styles.left}>
     <img
       className={styles.img}
-      src={`/${product.image.desktop}`}
+      src={`/${product?.image?.desktop}`}
       alt="#"
       style={{width: imgSize}}
     />
     <div className={styles.info}>
-      <p>{product.name.split(" ")[0]}</p>
-      <p>$ {product.price}</p>
+      <p>{product?.name.split(" ")[0]}</p>
+      <p>$ {product?.price}</p>
     </div>
   </div>
   )
