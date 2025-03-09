@@ -1,11 +1,71 @@
 .footer {
-    background: black;
-    color: white;
-    padding: 75px 0 48px;
+  background: black;
+  color: white;
+  padding: 75px 0 48px;
 }
-
 .footerContainer {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.left {
+  flex-grow: 1;
+}
+.left .p {
+  margin-top: 36px;
+  color: #ffffff;
+  opacity: 0.5;
+  max-width: 540px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+}
+.left .p2 {
+  margin-top: 56px;
+  color: #ffffff;
+  opacity: 0.5;
+  max-width: 540px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 25px;
+}
+.right {
+  display: flex;
+  gap: 105px;
+  flex-grow: 1;
+  flex-direction: column;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav a {
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: color 0.155s ease;
+}
+nav a:hover {
+  color: var(--color-primary);
+}
+ul {
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+ul li {
+  cursor: pointer;
+}
+ul li img {
+  transition: filter 0.1s ease;
+}
+ul li img:hover {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(500%)
+    hue-rotate(330deg) brightness(100%) contrast(100%);
 }

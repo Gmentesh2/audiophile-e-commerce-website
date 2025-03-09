@@ -5,7 +5,7 @@ const AudioSection = () => {
   return (
     <section className={styles.section}>
       <div className={`${styles.audioSectionContainer} container`}>
-        <div>
+        <div className={styles.sectionContent}>
           <h2 className={styles.heading}>
             Bringing you the <span>best</span> audio gear
           </h2>

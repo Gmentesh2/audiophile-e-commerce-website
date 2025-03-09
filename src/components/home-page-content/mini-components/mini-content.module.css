@@ -1,0 +1,150 @@
+.speaker-img {
+  position: relative;
+}
+.zx9-speaker {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 560px;
+  max-height: 100%;
+  overflow: hidden;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  gap: 138px;
+  padding: 0 20px;
+}
+.speakerIMG {
+  width: 410px;
+  height: 493px;
+  margin-left: 117px;
+  position: relative;
+  transform: translateY(50px);
+}
+.decorator {
+  position: absolute;
+  top: 0;
+  left: -150px;
+  transform: translateY(-60px);
+}
+.speaker-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin-top: 220px;
+}
+.speaker-content h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+.speaker-content p {
+  color: #ffffff;
+  opacity: 0.75;
+  font-size: 15px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+.speaker-content a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px 30px;
+  width: 160px;
+  text-transform: uppercase;
+  z-index: 1;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.155s ease;
+}
+.speaker-content a:hover {
+  background-color: #4c4c4c;
+}
+
+/* * */
+.zx7-speaker {
+  width: 100%;
+  height: 320px;
+  max-height: 100%;
+  background-image: url("/assets/home/desktop/image-speaker-zx7.jpg");
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  margin-top: 48px;
+}
+.speaker-content-2 {
+  padding: 101px 95px;
+}
+.speaker-content-2 h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 32px;
+  letter-spacing: 2px;
+}
+.speaker-content-2 a {
+  padding: 15px 30px;
+  border: 1px solid #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background-color 0.155s ease;
+}
+.speaker-content-2 a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* * */
+.earphone {
+  display: flex;
+  gap: 30px;
+  margin-top: 48px;
+  width: 100%;
+}
+.earphone img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  flex-grow: 1;
+}
+.earphoneContent {
+  display: flex;
+  flex-direction: column;
+  background-color: #f1f1f1;
+  flex-grow: 1;
+  padding: 101px 95px;
+  gap: 32px;
+}
+.earphoneContent h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 2px;
+}
+.earphoneContent a {
+  color: #000000;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  padding: 15px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: fit-content;
+  transition: background-color 0.155s ease;
+}
+.earphoneContent a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}

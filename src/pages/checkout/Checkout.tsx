@@ -16,7 +16,7 @@ export type FormData = {
   country: string;
 };
 const Checkout = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const navigate = useNavigate();
 
   const {
@@ -36,7 +36,7 @@ const Checkout = () => {
   });
   const onSubmit = (data: FormData) => {
     console.log(data);
-    setIsOpen(true)
+    setModalIsOpen(true)
   };
   console.log(errors);
   return (
@@ -53,11 +53,11 @@ const Checkout = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.checkoutContainer}>
             <CheckoutForm register={register} errors={errors} />
-            <Summary setIsOpen={setIsOpen} />
+            <Summary setIsOpen={setModalIsOpen} />
           </div>
         </form>
       </div>
-      <CheckoutModal isOpen={modalIsOpen} setIsOpen={setIsOpen} />
+      <CheckoutModal isOpen={modalIsOpen} setIsOpen={setModalIsOpen} />
     </main>
   );
 };

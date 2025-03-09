@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../../components/product-card/ProductCard";
@@ -49,7 +47,6 @@ const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   const params = useParams();
-  //console.log(params);
 
   const getProducts = async () => {
     const res = await fetch("http://localhost:3000/products");
@@ -57,8 +54,6 @@ const Products = () => {
     //console.log(data)
     setProducts(data);
   };
-  //console.log(products);
-
   useEffect(() => {
     getProducts();
   }, []);

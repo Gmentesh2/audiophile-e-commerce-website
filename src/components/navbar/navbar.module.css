@@ -1,13 +1,18 @@
 .navbar {
   background-color: black;
   color: white;
+  height: 96px;
 }
 .navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbarContainer h2 {
+  font-weight: bold;
 }
 .left {
   display: flex;
@@ -17,10 +22,16 @@
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-text-two);
+  font-size: 13px;
+  font-weight: bold;
+  transition: color 0.155s ease;
+}
+.links a:hover {
+  color: var(--color-primary);
 }
 .links {
   display: flex;
-  gap: 10px;
+  gap: 34px;
 }
 .cart {
   border: none;

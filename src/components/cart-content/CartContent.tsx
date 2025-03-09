@@ -10,7 +10,6 @@ type Props = {
 };
 const CartContent = ({ setIsOpen }: Props) => {
   const context = useContext(SelectedProductsContext);
-  //console.log(context?.selectedItems);
   const navigate = useNavigate();
 
   const removeAll = () => {
