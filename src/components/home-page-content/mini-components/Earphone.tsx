@@ -10,7 +10,7 @@ const Earphone = () => {
       </section>
       <section className={styles.earphoneContent}>
         <h1>YX1 EARPHONES</h1>
-        <Link to={"/"}>See Product</Link>
+        <Link to={"/single-product/1"}>See Product</Link>
       </section>
     </div>
   );

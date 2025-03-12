@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import styles from "./audio-section.module.css";
 import icon from "../../assets/shared/desktop/image-best-gear.jpg";
 const AudioSection = () => {

@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Dispatch, SetStateAction, useContext, useEffect } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import {
   SelectedItem,
   SelectedProductsContext,
@@ -20,31 +19,22 @@ const ProductBtn = ({ product, size = "medium", count, setCount }: Props) => {
   const item = context?.selectedItems?.find(
     (item) => item.product?.id === product?.id
   );
-  // clicking on plus //
-  const handleClickPlus = () => {
-    if (!item) {
-      addNewProduct();
-    } else {
-      IncreaseExistingProduct();
-    }
-  };
-  // When amount > 0
-  const IncreaseExistingProduct = () => {
+
+  const updateProductAmount = (amount: number) => {
     const newProducts = context?.selectedItems?.map((currItem) => {
       if (currItem.product.id === item?.product.id) {
         return {
           ...currItem,
-          amount: currItem.amount + 1,
+          amount: currItem.amount + amount,
         };
-      } else {
-        return currItem;
       }
+      return currItem;
     });
     if (newProducts) {
       context?.setSelectedItems(newProducts);
     }
   };
-  // When amount is 0
+
   const addNewProduct = () => {
     if (!product) return;
 
@@ -54,22 +44,6 @@ const ProductBtn = ({ product, size = "medium", count, setCount }: Props) => {
     };
 
     context?.setSelectedItems([...(context.selectedItems || []), newItem]);
-  };
-  //
-  // useEffect(() => {
-  //   console.log(context?.selectedItems, item);
-  // }, [context?.selectedItems, item]);
-
-  /// clicking on minus
-
-  const handleClickMinus = () => {
-    if (!item) return;
-
-    if (item.amount === 1) {
-      removeProduct();
-    } else {
-      decreaseProductAmount();
-    }
   };
 
   const removeProduct = () => {
@@ -85,22 +59,27 @@ const ProductBtn = ({ product, size = "medium", count, setCount }: Props) => {
       context?.setSelectedItems(newProducts);
     }
   };
-  const decreaseProductAmount = () => {
-    const newProducts = (context?.selectedItems || []).map((currItem) => {
-      if (currItem.product.id === item?.product.id) {
-        return {
-          ...currItem,
-          amount: currItem.amount - 1,
-        };
-      } else {
-        return currItem;
-      }
-    });
-    if (newProducts) {
-      context?.setSelectedItems(newProducts);
+
+  // clicking on plus //
+  const handleClickPlus = () => {
+    if (!item) {
+      addNewProduct();
+    } else {
+      updateProductAmount(1);
     }
   };
 
+  /// clicking on minus
+
+  const handleClickMinus = () => {
+    if (!item) return;
+
+    if (item.amount === 1) {
+      removeProduct();
+    } else {
+      updateProductAmount(-1);
+    }
+  };
   return (
     <div
       className={styles.btnContainer}

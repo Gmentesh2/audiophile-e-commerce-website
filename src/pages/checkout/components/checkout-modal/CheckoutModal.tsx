@@ -32,7 +32,6 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
   const navigate = useNavigate();
   const context = useContext(SelectedProductsContext) as ContextType;
   const [viewLess, setViewLess] = useState(true);
-  //console.log(context?.selectedItems);
 
   const firstProduct: SelectedItem[] = context?.selectedItems
     ? [context.selectedItems[0]]

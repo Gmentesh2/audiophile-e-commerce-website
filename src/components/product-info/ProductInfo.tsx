@@ -1,31 +1,33 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { Product } from "../../pages/products/Products";
-
 import styles from "./product-info.module.css";
 import ProductBtn from "../product-btn/ProductBtn";
 import {
   SelectedItem,
   SelectedProductsContext,
 } from "../../context/SelectedProductsContext";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   product: Product | null;
+  category?: string;
 };
 
-const ProductInfo = ({ product }: Props) => {
+const ProductInfo = ({ product, category }: Props) => {
   const context = useContext(SelectedProductsContext);
+  const navigate = useNavigate();
   const [count, setCount] = useState(0);
   const item = context?.selectedItems?.find(
     (item) => item.product.id === product?.id
   );
+
   useEffect(() => {
     if (item?.amount) {
       setCount(item?.amount);
     }
   }, [item?.amount]);
-  //add to cart 
+
+  //add to cart
   const addToCart = () => {
     if (count === 0) {
       // delete product
@@ -82,21 +84,40 @@ const ProductInfo = ({ product }: Props) => {
     }
   };
 
+  // Function to format the price
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
+
+
   return (
     <section className={styles.section}>
       <div className={`${styles.infoContainer} container`}>
         <div>
+          <button
+            onClick={() => {
+              navigate(`/products/${category}`);
+            }}
+            className={styles.backBtn}
+          >
+            Go Back
+          </button>
           <img
             className={styles.img}
             src={`/${product?.image.desktop}`}
             alt="#"
           />
         </div>
-        <div>
+        <div className={styles.info}>
+          {product?.new && <span className={styles.newProduct}>New Product</span>}
           <h2 className={styles.heading}>{product?.name}</h2>
           <p className={styles.p}>{product?.description}</p>
-          <h3>$ {product?.price}</h3>
-          <div>
+          <h3>{formatPrice(product?.price ?? 0)}</h3>
+          <div className={styles.btnContainer}>
             <ProductBtn
               product={product}
               count={count}
@@ -111,9 +132,9 @@ const ProductInfo = ({ product }: Props) => {
                   count === item?.amount
                     ? "var(--color-secondary)"
                     : "var(--color-primary)",
-                cursor: count === item?.amount ? "default" : "pointer",
+                cursor: count === item?.amount ? "not-allowed" : "pointer",
               }}
-              className="btn"
+              className={styles.addToCartBtn}
             >
               Add to cart
             </button>

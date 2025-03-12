@@ -1,0 +1,24 @@
+.gallery {
+  width: 100%;
+  margin-top: 160px;
+}
+.imgContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+.imgContainer img {
+  border-radius: 7px;
+}
+.first {
+  grid-column: 1/2;
+  grid-row: 1;
+}
+.second {
+  grid-column: 1/2;
+  grid-row: 2;
+}
+.third {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}

@@ -9,4 +9,9 @@
 .h{
     font-weight: bold;
     font-size: 40px;
+    letter-spacing: 1.43px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
 }

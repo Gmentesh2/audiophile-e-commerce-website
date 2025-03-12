@@ -7,8 +7,6 @@ type Props = {
   flexDirection?: "row" | "row-reverse";
 };
 const ProductCard = ({ product, flexDirection = "row" }: Props) => {
-  //const navigate = useNavigate()
-
   return (
     <div
       className={styles.card}
@@ -16,12 +14,12 @@ const ProductCard = ({ product, flexDirection = "row" }: Props) => {
       style={{ flexDirection: flexDirection }}
     >
       <div className={styles.left}>
+        {product.new && <span className={styles.new}>New Product</span>}
         <h3>{product.name}</h3>
         <p>{product.description}</p>
-        {/* <button onClick={() => {
-          navigate(`/single-product/${product.id}`)
-        }}>See Product</button> */}
-        <Link className={styles.btn} to={`/single-product/${product.id}`} >See product</Link>
+        <Link className={styles.btn} to={`/single-product/${product.id}`}>
+          See product
+        </Link>
       </div>
       <img className={styles.img} src={"/" + product.image.desktop} alt="" />
     </div>

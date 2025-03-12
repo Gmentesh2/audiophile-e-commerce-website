@@ -1,20 +1,31 @@
 .btnContainer {
   display: flex;
-  color: black;
-  gap: 20px;
+  background-color: #F1F1F1;
+  align-items: center;
+  padding: 15px; 
+  gap: 5px; 
+
 }
 .btnContainer button {
   border: none;
   width: 30px;
-  background: transparent;
+  opacity: 0.25;
+  letter-spacing: 1px;
+  font-size: 13px;
   color: black;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.btnContainer button:hover {
+  color: var(--color-primary);
+  opacity: 1;
+}
 .btnContainer span {
   display: flex;
   align-items: center;
+  font-size: 13px;
+  letter-spacing: 1px;
   justify-content: center;
   width: 20px;
 }

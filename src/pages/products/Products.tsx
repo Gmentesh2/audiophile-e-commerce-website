@@ -45,36 +45,34 @@ export type OtherProduct = {
 
 const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
-
-  const params = useParams();
+  const params = useParams<{ category: string }>();
 
   const getProducts = async () => {
-    const res = await fetch("http://localhost:3000/products");
-    const data = await res.json();
-    //console.log(data)
-    setProducts(data);
+    try {
+      const res = await fetch("http://localhost:3000/products");
+      const data = await res.json();
+      setProducts(data);
+    } catch (error) {
+      console.error("Failed to fetch products:", error);
+    }
   };
   useEffect(() => {
     getProducts();
   }, []);
-
-  
 
   return (
     <div>
       <CategorySection category={params.category} />
       {products
         ?.filter((product) => product.category === params.category)
-        .map((product, index) => {
-          return (
-            <ProductCard
-              product={product}
-              key={product.id}
-              flexDirection={index % 2 == 0 ? "row-reverse" : "row"}
-            />
-          );
-        })}
-        <ThumbnailSection />
+        .map((product, index) => (
+          <ProductCard
+            product={product}
+            key={product.id}
+            flexDirection={index % 2 == 0 ? "row-reverse" : "row"}
+          />
+        ))}
+      <ThumbnailSection />
     </div>
   );
 };

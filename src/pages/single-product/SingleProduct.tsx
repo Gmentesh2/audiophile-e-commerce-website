@@ -5,26 +5,36 @@ import { Product } from "../products/Products";
 import ProductInfo from "../../components/product-info/ProductInfo";
 import ThumbnailSection from "../../components/thumbnail-section/ThumbnailSection";
 import YouMayLike from "../../components/you-may-like/YouMayLike";
+import AboutProduct from "../../components/about-product/AboutProduct";
+import ProductGallery from "../../components/single-product-gallery/ProductGallery";
 
 const SingleProduct = () => {
   const [product, setProduct] = useState<null | Product>(null);
-  const params = useParams();
-  //console.log(params)
+  const { id, slug } = useParams<{ id?: string; slug?: string }>();
 
   const getProduct = async () => {
-    const res = await fetch("http://localhost:3000/products/" + params.id);
-    const data = await res.json();
-    //console.log(data)
-    setProduct(data);
+    const identifier = id ?? slug;
+    if (!identifier) return;
+    try {
+      const res = await fetch(`http://localhost:3000/products/${identifier}`);
+      if (!res.ok) {
+        throw new Error(`Product not found: ${res.statusText}`);
+      }
+      const data = await res.json();
+      setProduct(data);
+    } catch (error) {
+      alert("Failed to fetch product:" + error);
+    }
   };
   useEffect(() => {
     getProduct();
-  }, []);
+  }, [id, slug]);
 
-  // http://localhost:3000/products + params.id
   return (
     <div>
-      <ProductInfo product={product} />
+      <ProductInfo product={product} category={product?.category} />
+      <AboutProduct product={product} />
+      <ProductGallery product={product} />
       <YouMayLike product={product} />
       <ThumbnailSection />
     </div>
