@@ -34,8 +34,7 @@ const Checkout = () => {
       country: "",
     },
   });
-  const onSubmit = (data: FormData) => {
-    console.log(data);
+  const onSubmit = () => {;
     setModalIsOpen(true)
   };
   console.log(errors);
@@ -46,7 +45,7 @@ const Checkout = () => {
           onClick={() => {
             navigate(-1);
           }}
-          className="link"
+          className={styles.backButton}
         >
           Go back
         </button>

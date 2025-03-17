@@ -10,10 +10,10 @@ import ProductGallery from "../../components/single-product-gallery/ProductGalle
 
 const SingleProduct = () => {
   const [product, setProduct] = useState<null | Product>(null);
-  const { id, slug } = useParams<{ id?: string; slug?: string }>();
+  const { id } = useParams<{ id?: string }>();
 
   const getProduct = async () => {
-    const identifier = id ?? slug;
+    const identifier = id;
     if (!identifier) return;
     try {
       const res = await fetch(`http://localhost:3000/products/${identifier}`);
@@ -28,7 +28,7 @@ const SingleProduct = () => {
   };
   useEffect(() => {
     getProduct();
-  }, [id, slug]);
+  }, [id]);
 
   return (
     <div>

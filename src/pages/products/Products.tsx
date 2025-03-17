@@ -38,6 +38,7 @@ export type Gallery = {
 };
 
 export type OtherProduct = {
+  id: string;
   slug: string;
   name: string;
   image: ImageSet;

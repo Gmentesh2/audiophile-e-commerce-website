@@ -61,3 +61,52 @@
 .link:hover .arrow {
   transform: translateX(5px);
 }
+
+/* Media Queries */ 
+@media screen and (max-width: 950px){
+  .section{
+    padding: 0 39px;
+    margin-bottom: 96px;
+  }
+  .card img{
+    width: 200px;
+    bottom: 90px;
+  }
+}
+@media screen and (max-width: 900px){
+  .card img{
+    width: 180px;
+    bottom: 75px;
+  }
+  .card h3{
+    transform: translateY(-10px);
+  }
+  .card{
+    padding-bottom: 15px;
+    height: 165px;
+  }
+  .link{
+    transform: translateY(-10px);
+  }
+
+}
+@media screen and (max-width: 800px){
+  .card h3{
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px){
+  .sectionContainer{
+    flex-direction: column;
+    gap: 85px
+  }
+  .card img{
+    width: 200px;
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px){
+  .section{
+    padding: 0 24px;
+  }
+}

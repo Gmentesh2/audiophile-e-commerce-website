@@ -12,3 +12,15 @@
     border-radius: 8px;
     margin-right: 16px;
 }
+.productName{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+}
+.productPrice{
+    font-size: 14px;
+    color: #000000;
+    opacity: 0.5;
+    line-height: 25px;
+}

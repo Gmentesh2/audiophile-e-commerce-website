@@ -4,6 +4,7 @@ import ProductBtn from "../product-btn/ProductBtn";
 import { useNavigate } from "react-router-dom";
 import styles from "./cart-content.module.css";
 import ProductPreview from "../product-preview/ProductPreview";
+import emptyCartImage from "../../assets/emptyCartImage.png";
 
 type Props = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -24,14 +25,17 @@ const CartContent = ({ setIsOpen }: Props) => {
   };
 
   if (context?.selectedItems?.length === 0) {
-    return <h2>No Products Selected</h2>;
+    return <div className={styles.emptyCart}>
+      <img className={styles.emptyCartImage} src={emptyCartImage} alt="empty cart" />
+      <p>Your cart is empty</p>
+    </div>;
   }
 
   return (
     <div>
-      <header>
+      <header className={styles.header}>
         <h2>CART ({context?.selectedItems?.length})</h2>
-        <button onClick={removeAll}>Remove All</button>
+        <button onClick={removeAll}>Remove all</button>
       </header>
       <div>
         {(context?.selectedItems || []).map((item) => {
@@ -48,15 +52,16 @@ const CartContent = ({ setIsOpen }: Props) => {
         })}
       </div>
 
-      <section>
-        <p>TOTAL</p>
-        <p>$ {findTotalPrice()}</p>
+      <section className={styles.totalSection}>
+        <p className={styles.total}>TOTAL</p>
+        <p className={styles.totalPrice}>$ {findTotalPrice()}</p>
       </section>
       <button
         onClick={() => {
           navigate("/checkout");
           setIsOpen(false);
         }}
+        className={styles.checkout}
       >
         checkout
       </button>

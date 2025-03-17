@@ -16,7 +16,7 @@ const YouMayLike = ({ product }: Props) => {
             <div key={other.slug} className={styles.card}>
               <img src={`/${other.image.desktop}`} alt={other.name} />
               <h3 className={styles.h3}>{other.name}</h3>
-              <Link className={styles.link} to={`/single-product/${other.slug}`}>See Product</Link>
+              <Link className={styles.link} to={`/single-product/${other?.id}`}>See Product</Link>
             </div>
           ))}
         </section>

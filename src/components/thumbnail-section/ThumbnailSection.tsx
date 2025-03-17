@@ -8,7 +8,7 @@ const ThumbnailSection = () => {
     <section className={styles.section}>
       <div className={`container ${styles.sectionContainer}`}>
         <article className={styles.card}>
-          <img src={headphonesImg} alt="#" />
+          <img src={headphonesImg} className={styles.headphonesIMG} alt="#" />
           <h3>Headphones</h3>
           <Link className={styles.link} to={"/products/headphones"}>
             <span className={styles.shop}>Shop</span>{" "}

@@ -31,3 +31,38 @@
 .sectionContent {
   max-width: 445px;
 }
+
+/*Media Queries*/
+
+@media screen and (max-width: 1050px) {
+  .audioSectionContainer {
+    gap: 55px;
+    padding: 39px;
+  }
+  .section {
+    margin-top: 96px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .audioSectionContainer {
+    flex-direction: column-reverse;
+  }
+  .img {
+    max-width: 100%;
+  }
+  .section{
+    margin-top: 0;
+    margin-bottom: 96px;
+  }
+  .heading {
+    text-align: center;
+  }
+  .p {
+    text-align: center;
+  }
+}
+@media screen and (max-width:500px){
+  .heading{
+    font-size: 28px;
+  }
+}

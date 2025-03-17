@@ -17,7 +17,7 @@ const customStyles = {
     left: "unset",
     right: "calc((100vw - 1110px)/2)",
     width: "377px",
-    height: "488px",
+    height: "fit-content",
   },
 };
 
@@ -31,7 +31,7 @@ const Navbar = () => {
           <img src={logo} alt="" />
         </Link>
         <nav className={styles.links}>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"}>Home</Link> 
           <Link to={"/products/headphones"}>Headphones</Link>
           <Link to={"/products/speakers"}>Speakers</Link>
           <Link to={"/products/earphones"}>Earphones</Link>
@@ -45,7 +45,6 @@ const Navbar = () => {
         onRequestClose={() => setModalIsOpen(false)}
         style={customStyles}
         ariaHideApp={false}
-        // overlayClassName={"cart-modal-overlay"}
       >
         <CartContent setIsOpen={setModalIsOpen} />
       </Modal>

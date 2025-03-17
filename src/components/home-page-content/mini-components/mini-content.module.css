@@ -39,6 +39,7 @@
   color: white;
   margin-bottom: 24px;
   line-height: 1;
+  letter-spacing: 2px;
 }
 .speaker-content p {
   color: #ffffff;
@@ -68,6 +69,48 @@
   background-color: #4c4c4c;
 }
 
+/* Media Queries zx9 Speaker */
+@media screen and (max-width: 950px) {
+  .speakersContainer {
+    padding: 39px 39px 0 39px;
+  }
+  .zx9-speaker {
+    flex-direction: column;
+    height: 720px;
+    gap: 120px;
+  }
+  .speakerIMG {
+    width: 197px;
+    height: 237px;
+    transform: translateY(52);
+    margin-left: 0;
+  }
+  .decorator {
+    left: 0px;
+    transform: translateX(-40%);
+    top: -290px;
+  }
+  .speaker-content {
+    margin-top: 0;
+  }
+  .speaker-content h1 {
+    text-align: center;
+  }
+  .speaker-content p {
+    text-align: center;
+  }
+  .speaker-content a {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .speaker-content h1 {
+    font-size: 36px;
+  }
+  .speakersContainer {
+    padding: 24px;
+  }
+}
 /* * */
 .zx7-speaker {
   width: 100%;
@@ -104,6 +147,22 @@
   color: #ffffff;
 }
 
+/* Media Queries zx7 Speaker */
+@media screen and (max-width: 950px) {
+  .zx7-speaker {
+    background-position: center;
+    max-width: 100%;
+  }
+  .speaker-content-2 {
+    padding: 101px 62px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .speaker-content-2 {
+    padding: 101px 24px;
+  }
+}
+
 /* * */
 .earphone {
   display: flex;
@@ -124,6 +183,7 @@
   flex-grow: 1;
   padding: 101px 95px;
   gap: 32px;
+  border-radius: 8px;
 }
 .earphoneContent h1 {
   font-size: 28px;
@@ -147,4 +207,37 @@
 .earphoneContent a:hover {
   background-color: #000000;
   color: #ffffff;
+}
+
+/* Media Queries earphone*/
+
+@media screen and (max-width: 1050px) {
+  .earphone {
+    gap: 11px;
+    padding: 39px;
+    margin-top: 0;
+  }
+  .earphoneContent {
+    padding-left: 41px;
+  }
+}
+@media screen and (max-width: 850px){
+  .earphone{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 550px){
+  .earphoneContent{
+    padding-top: 51px;
+    padding-bottom: 51px;
+  }
+}
+@media screen and (max-width: 500px) {
+    .earphone{
+      padding: 24px;
+    }
+    .earphoneContent{
+      padding: 41px 24px;
+      gap: 0
+    }
 }

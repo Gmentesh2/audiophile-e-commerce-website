@@ -5,7 +5,7 @@ import decorator from "../../../assets/home/desktop/pattern-circles.svg";
 
 const Speakers = () => {
   return (
-    <div>
+    <div className={styles.speakersContainer}>
       <article className={styles["zx9-speaker"]}>
         <div className={styles["speaker-img"]}>
           <img className={styles.decorator} src={decorator} alt="" />

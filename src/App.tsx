@@ -7,7 +7,7 @@ function App() {
   useScrollToTop();
 
   return (
-    <div>
+    <div className="wrapper">
       <SelectedProductsContextProvider>
         <RoutesConfig />
       </SelectedProductsContextProvider>

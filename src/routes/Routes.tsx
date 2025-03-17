@@ -9,10 +9,9 @@ const RoutesConfig = () => {
   return (
     <Routes>
       <Route element={<MainLayout />}>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/products/:category" element={<Products />} />
         <Route path="/single-product/:id" element={<SingleProduct />} />
-        <Route path="/single-product/:slug" element={<SingleProduct />} />
         <Route path="/checkout" element={<Checkout />} />
       </Route>
     </Routes>

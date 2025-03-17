@@ -92,6 +92,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name="email"
             id="email"
+            placeholder="alexei@mail.com"
             style={{
               borderColor: errors?.email?.message ? "var(--color-error)" : "",
             }}
@@ -108,6 +109,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name=""
             id="phone-number"
+            placeholder="+1 202-555-0136"
           />
         </div>
       </section>
@@ -124,7 +126,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name=""
             id="address"
-            placeholder=""
+            placeholder="1137 Williams Avenue"
           />
         </div>
         <div className={styles.inputContainer}>
@@ -137,6 +139,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name=""
             id="zip-code"
+            placeholder="10001"
           />
         </div>
         <div className={styles.inputContainer}>
@@ -149,6 +152,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name=""
             id="city"
+            placeholder="New York"
           />
         </div>
         <div className={styles.inputContainer}>
@@ -161,6 +165,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             type="text"
             name=""
             id="country"
+            placeholder="United States"
           />
         </div>
       </section>
@@ -202,12 +207,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
             <label className="label" htmlFor="e-money-pin">
               e-Money PIN
             </label>
-            <input
-              className="input"
-              type="number"
-              id="e-money-pin"
-              placeholder="6891"
-            />
+            <input className="input" type="number" id="e-money-pin" />
           </div>
         </section>
       )}

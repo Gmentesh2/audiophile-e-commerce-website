@@ -17,6 +17,7 @@
   letter-spacing: 0.93px;
   color: var(--color-primary);
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 .inputSection {
   display: grid;
@@ -48,4 +49,10 @@
   font-size: 12px;
   font-weight: 500;
   letter-spacing: -0.21px;
+}
+input::placeholder{
+  font-size: 14px;
+  color: #000000;
+  opacity: 0.5;
+  font-weight: bold;
 }

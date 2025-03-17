@@ -99,12 +99,8 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
                 }}
                 className={styles.showMoreBtn}
               >
-                {viewLess
-                  ? `and ${
-                      context?.selectedItems?.length
-                        ? context?.selectedItems?.length - 1
-                        : 0
-                    } other item(s)`
+                 {viewLess
+                  ? `and ${(context?.selectedItems?.length ?? 0) - 1} other item(s)`
                   : "View less"}
               </button>
             </div>
@@ -127,6 +123,7 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
               navigate("/");
               setIsOpen(false);
             }}
+            
           >
             Back to home
           </button>

@@ -44,7 +44,6 @@ main {
   border: none;
   font-weight: 500;
   letter-spacing: 0;
-
 }
 .label {
   font-size: 12px;
@@ -86,4 +85,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+
 
