@@ -6,12 +6,19 @@
 .footerContainer {
   display: flex;
   gap: 30px;
+}
+.footerSection{
+  width: 100%;
+}
+.header{
+  display: flex;
   justify-content: space-between;
 }
-.left {
-  flex-grow: 1;
+nav{
+  display: flex;
+  gap: 34px
 }
-.left .p {
+.p {
   margin-top: 36px;
   color: #ffffff;
   opacity: 0.5;
@@ -20,7 +27,7 @@
   font-size: 15px;
   line-height: 25px;
 }
-.left .p2 {
+.p2 {
   margin-top: 56px;
   color: #ffffff;
   opacity: 0.5;
@@ -28,17 +35,6 @@
   font-weight: bold;
   font-size: 15px;
   line-height: 25px;
-}
-.right {
-  display: flex;
-  gap: 105px;
-  flex-grow: 1;
-  flex-direction: column;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 nav a {
   text-decoration: none;
@@ -53,9 +49,12 @@ nav a {
 nav a:hover {
   color: var(--color-primary);
 }
+.down-section{
+  display: flex;
+  justify-content: space-between;
+}
 ul {
   display: flex;
-  justify-content: end;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -68,4 +67,67 @@ ul li img {
 ul li img:hover {
   filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(500%)
     hue-rotate(330deg) brightness(100%) contrast(100%);
+}
+
+/* Media Queries */ 
+@media screen and (max-width: 1100px){
+  .footer{
+    padding-right: 40px;
+    padding-left: 39px;
+  }
+}
+@media screen and (max-width: 1050px){
+  .p{
+    max-width: 380px;
+  }
+}
+@media screen and (max-width: 900px){
+  .header{
+    flex-direction: column;
+    gap: 32px
+  }
+  .header img{
+    max-width: 143px;
+    max-height: 42px;
+  }
+  .p{
+    max-width: 85%;
+  }
+  .p2{
+    margin-top: 82px;
+  }
+  .down-section{
+    align-items: end;
+  }
+}
+@media screen and (max-width: 500px){
+  .footerSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header{
+    justify-content: center;
+    align-items: center;
+    gap: 48px
+  }
+  .nav{
+    flex-direction: column;
+    align-items: center;
+  }
+  .p{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .down-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px
+  }
+  .p2{
+    margin-top: 48px;
+  }
 }

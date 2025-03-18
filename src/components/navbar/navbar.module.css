@@ -1,7 +1,9 @@
 .navbar {
+  width: 100%;
   background-color: black;
   color: white;
   height: 96px;
+  z-index: 1000;
 }
 .navbarContainer {
   display: flex;
@@ -10,9 +12,21 @@
   height: 100%;
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999;
 }
 .navbarContainer h2 {
   font-weight: bold;
+}
+.navbarLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .left {
   display: flex;
@@ -40,6 +54,109 @@
   justify-content: center;
   background-color: transparent;
 }
+.modalContent {
+  position: absolute;
+  top: 110px;
+  left: 77%;
+  transform: translateX(-50%);
+  width: 377px;
+  height: fit-content;
+  background-color: white;
+  padding: 40px;
+  z-index: 1000;
+  border-radius: 8px;
+}
+.burgerMenuBtn {
+  background-color: transparent;
+  border: none;
+  display: none;
+  padding: 0;
+}
+.burgerMenuContent {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+}
+.overlay {
+  position: fixed;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
 
 /*Media Queries*/
+@media screen and (max-width: 1100px) {
+  .navbarContainer {
+    padding: 32px 40px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .burgerMenuBtn {
+    display: flex;
+  }
+}
+@media screen and (max-width: 830px) {
+  .modalContent {
+    left: 70%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .modalContent {
+    left: 60%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .modalContent {
+    left: 50%;
+    width: 327px;
+  }
+  .navbarLeft {
+    gap: 110px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .navbarLeft {
+    gap: 100px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbarLeft {
+    gap: 90px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .navbarLeft {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .navbarLeft {
+    gap: 70px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .navbarLeft {
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .navbarLeft {
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .navbarLeft {
+    gap: 30px;
+  }
+}

@@ -14,17 +14,16 @@
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.46);
   background-blend-mode: multiply;
-  
-} 
-.heroContent{
+}
+.heroContent {
   width: 398px;
   max-width: 100%;
   padding: 0 20px;
 }
-.heroContent h4{
+.heroContent h4 {
   font-size: 14px;
   opacity: 0.5;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 10px;
   font-weight: 400;
@@ -38,7 +37,7 @@
   line-height: 0.9;
 }
 .heroContent p {
-  color: #FFFFFF; 
+  color: #ffffff;
   opacity: 0.75;
   line-height: 25px;
   letter-spacing: 0;
@@ -46,11 +45,11 @@
   font-weight: 500;
   margin-top: 33px;
 }
-.btn{
+.btn {
   background-color: var(--color-primary);
   width: 160px;
   height: 48px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-decoration: none;
   text-align: center;
   display: flex;
@@ -65,6 +64,104 @@
   transition: background-color 0.3s;
   text-transform: uppercase;
 }
-.btn:hover{
-  background-color: #FBAF85;
+.btn:hover {
+  background-color: #fbaf85;
+}
+/* Media Queries */
+
+@media screen and (max-width: 1000px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -530px 0;
+  }
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transform: translateX(100px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -550px 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -570px 0;
+  }
+  .heroContent {
+    transform: translateX(70px);
+  }
+}
+@media screen and (max-width: 530px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -580px 0;
+  }
+  .heroContent {
+    transform: translateX(55px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -585px 0;
+  }
+  .heroContent {
+    transform: translateX(55px);
+  }
+}
+@media screen and (max-width: 490px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -605px 0;
+  }
+  .heroContent {
+    transform: translateX(35px);
+  }
+  .heroContent h1{
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 445px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -615px 0;
+  }
+  .heroContent {
+    transform: translateX(22px);
+  }
+}
+@media screen and (max-width: 415px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -630px 0;
+  }
+  .heroContent {
+    transform: translateX(8px);
+  }
+}
+@media screen and (max-width: 400px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -640px 0;
+  }
+  .heroContent {
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 380px) {
+  .heroContainer {
+    max-width: 600px;
+    background-position: -645px 0;
+  }
+  .heroContent {
+    transform: translateX(0px);
+  }
 }

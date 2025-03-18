@@ -64,3 +64,10 @@
     letter-spacing: 1px;
     font-weight: bold;
 }
+/* Media Queries */ 
+@media screen and (max-width: 1050px){
+  .infoContainer{
+    padding: 0 40px;
+    gap: 90px;
+  }
+}
