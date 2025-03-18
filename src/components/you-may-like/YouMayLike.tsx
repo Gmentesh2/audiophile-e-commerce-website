@@ -9,7 +9,7 @@ type Props = {
 const YouMayLike = ({ product }: Props) => {
   return (
     <section className={styles.section}>
-      <div className={`container`}>
+      <div className={`container ${styles.youMayLike}`}>
         <h2 className={styles.heading}>You May Like</h2>
         <section className={styles.cardSection}>
           {product?.others?.map((other) => (

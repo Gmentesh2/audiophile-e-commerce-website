@@ -24,7 +24,7 @@
 }
 .card img {
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   border-radius: 7px;
   margin-bottom: 40px;
 }
@@ -47,5 +47,51 @@
   transition: background-color 0.155s ease;
 }
 .link:hover {
-  background-color: #FBAF85;
+  background-color: #fbaf85;
+}
+/* Media Queries */
+@media screen and (max-width: 1050px) {
+  .youMayLike {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 223px;
+    height: 318px;
+  }
+  .h3 {
+    font-size: 20px;
+  }
+  .link {
+    max-width: 160px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 223px;
+    height: 318px;
+  }
+  .h3 {
+    font-size: 20px;
+  }
+  .link {
+    max-width: 130px;
+    padding: 8px 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardSection {
+    flex-direction: column;
+    gap: 56px;
+    justify-content: center;
+    align-items: center;
+  }
+  .link {
+    padding: 15px 30px;
+    max-width: 160px;
+  }
+  .card img {
+    object-fit: fill;
+  }
 }

@@ -34,13 +34,13 @@ const Checkout = () => {
       country: "",
     },
   });
-  const onSubmit = () => {;
-    setModalIsOpen(true)
+  const onSubmit = () => {
+    setModalIsOpen(true);
   };
   console.log(errors);
   return (
     <main className={`${styles.main}`}>
-      <div className="container">
+      <div className={`container ${styles.checkoutPage}`}>
         <button
           onClick={() => {
             navigate(-1);

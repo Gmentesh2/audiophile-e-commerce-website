@@ -30,7 +30,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
     <div className={styles.form}>
       <h1>CHECKOUT</h1>
       <h3 className={styles.inputHeading}>Billing Details</h3>
-      <section className={styles.inputSection}>
+      <section className={`${styles.inputSection} ${styles.miniSection}`}>
         <div className={styles.inputContainer}>
           <label
             style={{
@@ -115,7 +115,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
       </section>
       {""}
       <h3 className={styles.inputHeading}>Shipping Info</h3>
-      <section className={styles.inputSection}>
+      <section className={`${styles.inputSection} ${styles.miniSection}`}>
         <div className={styles.inputContainer} style={{ gridColumn: "1 / 3" }}>
           <label className="label" htmlFor="address">
             Address
@@ -171,7 +171,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
       </section>
 
       <h3 className={styles.inputHeading}>PAYMENT DETAILS</h3>
-      <section className={styles.inputSection} style={{ rowGap: "16px" }}>
+      <section className={`${styles.inputSection} ${styles.miniSection2}`} style={{ rowGap: "16px" }}>
         <h3 className="label">Payment Method</h3>
 
         <RadioInput
@@ -191,7 +191,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
       </section>
       {/*e-money input */}
       {paymentMethod === "e-money" && (
-        <section className={styles.inputSection} style={{ marginBottom: "0" }}>
+        <section className={`${styles.inputSection} ${styles.miniSection}`} style={{ marginBottom: "0" }}>
           <div className={styles.inputContainer}>
             <label className="label" htmlFor="e-money-number">
               e-Money Number

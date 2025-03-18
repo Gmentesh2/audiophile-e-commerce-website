@@ -4,7 +4,7 @@
   border-radius: 8px;
   min-height: 400px;
   flex-grow: 1;
-  width: 0;
+  width: 30%;
   align-self: start;
 }
 .products {
@@ -75,4 +75,11 @@
     color: #000000;
     opacity: 0.5;
     line-height: 25px;
+}
+/* Media Queries */ 
+@media screen and (max-width: 950px){
+    .summary{
+        width: 100%;
+        max-width: 100%;
+    }
 }

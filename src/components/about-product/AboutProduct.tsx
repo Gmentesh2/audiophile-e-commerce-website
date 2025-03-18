@@ -19,14 +19,16 @@ const AboutProduct = ({ product }: Props) => {
         </article>
         <article className={styles.inTheBox}>
           <h1>In the Box</h1>
-          {product?.includes.map((i) => {
-            return (
-              <div className={styles.items} key={i.item}>
-                <span className={styles.quantity}>{i.quantity}x</span>
-                <span className={styles.item}>{i.item}</span>
-              </div>
-            );
-          })}
+          <div>
+            {product?.includes.map((i) => {
+              return (
+                <div className={styles.items} key={i.item}>
+                  <span className={styles.quantity}>{i.quantity}x</span>
+                  <span className={styles.item}>{i.item}</span>
+                </div>
+              );
+            })}
+          </div>
         </article>
       </div>
     </div>

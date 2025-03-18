@@ -9,6 +9,9 @@
     margin-bottom: 140px;
     margin-top: 38px;
 }
+form{
+    width: 100%
+}
 .backButton{
     color: #000000;
     opacity: 0.5;
@@ -22,4 +25,16 @@
 .backButton:hover{
     color: var(--color-primary);
     opacity: 1;
+}
+/* Media Queries */ 
+@media screen and (max-width:1050px){
+    .checkoutPage{
+        padding: 0 40px;
+    }
+}
+@media screen and (max-width: 950px){
+    .checkoutContainer{
+        flex-direction: column;
+        width: 100%;
+    }
 }

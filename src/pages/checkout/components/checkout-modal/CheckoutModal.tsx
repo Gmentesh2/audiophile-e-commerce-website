@@ -18,14 +18,7 @@ type Props = {
 const customStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.50)",
-  },
-  content: {
-    width: "540px",
-    minHeight: "fit-content",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%,-50%)",
-  },
+  }
 };
 
 const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
@@ -67,6 +60,7 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
         isOpen={isOpen}
         ariaHideApp={false}
         style={customStyles}
+        className={styles.checkoutModal}         
         onRequestClose={() => setIsOpen(false)}
       >
         <div className={styles.container}>

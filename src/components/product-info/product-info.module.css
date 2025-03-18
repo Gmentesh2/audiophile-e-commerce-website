@@ -64,10 +64,60 @@
     letter-spacing: 1px;
     font-weight: bold;
 }
+.upperSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
 /* Media Queries */ 
 @media screen and (max-width: 1050px){
   .infoContainer{
     padding: 0 40px;
     gap: 90px;
+  }
+}
+@media screen and (max-width: 1000px){
+  .infoContainer{
+    gap: 70px
+  }
+  .img{
+    width: 400px;
+    }
+}
+@media screen and (max-width: 768px){
+  .section{
+    margin: 49px 0
+  }
+  .backBtn{
+    margin-bottom: 32px;
+  }
+  .img{
+    width: 281px;
+  }
+  .heading{
+    font-size: 28px;
+  }
+  .btnContainer{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 650px){
+  .infoContainer{
+    gap: 30px
+  }
+}
+@media screen and (max-width: 600px){
+  .section{
+    margin: 39px 0;
+  }
+  .infoContainer{
+    flex-direction: column;
+  }
+  .upperSection{
+    width: 100%;
+  }
+  .img{
+    width: 100%;
   }
 }

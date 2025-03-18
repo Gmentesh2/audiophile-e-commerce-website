@@ -97,7 +97,7 @@ const ProductInfo = ({ product, category }: Props) => {
   return (
     <section className={styles.section}>
       <div className={`${styles.infoContainer} container`}>
-        <div>
+        <div className={styles.upperSection}>
           <button
             onClick={() => {
               navigate(`/products/${category}`);

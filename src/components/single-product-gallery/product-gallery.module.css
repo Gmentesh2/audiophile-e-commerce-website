@@ -23,45 +23,112 @@
   grid-row: 1 / 3;
 }
 /* Media Queries */
-@media screen and (max-width: 1090px){
-  .imgContainer{
+@media screen and (max-width: 1090px) {
+  .imgContainer {
     padding: 0 40px;
-    gap: 18px
+    gap: 18px;
   }
-  .first{
+  .first {
     width: 400px;
     height: 224px;
-    object-fit: contain;
+    object-fit: cover;
   }
-  .second{
+  .second {
     width: 400px;
     height: 224px;
-    object-fit: contain;
+    object-fit: cover;
   }
-  .third{
+  .third {
     width: 790px;
     max-width: 100%;
     height: 466px;
     object-fit: cover;
   }
-
 }
-
-
-
-@media screen and (max-width: 768px){
-  .first{
+@media screen and (max-width: 875px) {
+  .first {
+    width: 346px;
+    height: 174px;
+  }
+  .second {
+    width: 346px;
+    height: 174px;
+  }
+  .third {
+    width: 610px;
+    max-width: 100%;
+    height: 368px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .first {
     width: 277px;
     height: 174px;
   }
-  .second{
+  .second {
     width: 277px;
     height: 174px;
   }
-  .third{
+  .third {
     width: 690px;
     max-width: 100%;
     height: 368px;
   }
-
+  .gallery{
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .first {
+    width: 247px;
+    height: 174px;
+  }
+  .second {
+    width: 247px;
+    height: 174px;
+  }
+  .third {
+    width: 690px;
+    max-width: 100%;
+    height: 368px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .first {
+    width: 227px;
+    height: 174px;
+  }
+  .second {
+    width: 227px;
+    height: 174px;
+  }
+  .third {
+    width: 690px;
+    max-width: 100%;
+    height: 368px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .first {
+    width: 100%;
+    height: 174px;
+    object-fit: cover;
+  }
+  .second {
+    width: 100%;
+    height: 174px;
+    object-fit: cover;
+  }
+  .third {
+    max-width: 100%;
+    height: 368px;
+    object-fit: cover;
+  }
 }
