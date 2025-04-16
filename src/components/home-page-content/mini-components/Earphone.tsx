@@ -4,7 +4,7 @@ import earphone from "../../../assets/home/desktop/image-earphones-yx1.jpg";
 
 const Earphone = () => {
   return (
-    <div className={styles.earphone}>
+    <div data-aos="fade-up" className={styles.earphone}>
       <section>
         <img src={earphone} alt="" />
       </section>

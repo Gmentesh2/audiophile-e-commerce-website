@@ -10,7 +10,7 @@ const AboutProduct = ({ product }: Props) => {
 
   return (
     <div className={styles.productInfo}>
-      <div className={`container ${styles.container}`}>
+      <div data-aos="fade-up" className={`container ${styles.container}`}>
         <article className={styles.description}>
           <h1>Features</h1>
           {descriptionParts.map((part) => (

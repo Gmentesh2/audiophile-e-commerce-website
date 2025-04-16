@@ -34,7 +34,7 @@ const Summary = ({ setIsOpen }: Props) => {
   };
 
   return (
-    <div className={styles.summary}>
+    <div data-aos="fade-up" className={styles.summary}>
       <h2 className={styles.heading}>Summary</h2>
       <div className={styles.products}>
         {(context?.selectedItems || []).map((item) => {

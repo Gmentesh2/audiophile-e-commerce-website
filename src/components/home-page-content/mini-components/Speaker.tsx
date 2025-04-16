@@ -6,7 +6,7 @@ import decorator from "../../../assets/home/desktop/pattern-circles.svg";
 const Speakers = () => {
   return (
     <div className={styles.speakersContainer}>
-      <article className={styles["zx9-speaker"]}>
+      <article data-aos="fade-up" className={styles["zx9-speaker"]}>
         <div className={styles["speaker-img"]}>
           <img className={styles.decorator} src={decorator} alt="" />
           <img className={styles.speakerIMG} src={speaker1} alt="" />
@@ -20,7 +20,7 @@ const Speakers = () => {
           <Link to={"/single-product/6"}>See Product</Link>
         </div>
       </article>
-      <article className={styles["zx7-speaker"]}>
+      <article data-aos="fade-up" className={styles["zx7-speaker"]}>
         <div className={styles["speaker-content-2"]}>
           <h1>ZX7 SPEAKER</h1>
           <Link to={"/single-product/5"}>See Product</Link>

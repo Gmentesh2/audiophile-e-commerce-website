@@ -3,7 +3,7 @@ import icon from "../../assets/shared/desktop/image-best-gear.jpg";
 const AudioSection = () => {
   return (
     <section className={styles.section}>
-      <div className={`${styles.audioSectionContainer} container`}>
+      <div data-aos="fade-up" className={`${styles.audioSectionContainer} container`}>
         <div className={styles.sectionContent}>
           <h2 className={styles.heading}>
             Bringing you the <span>best</span> audio gear

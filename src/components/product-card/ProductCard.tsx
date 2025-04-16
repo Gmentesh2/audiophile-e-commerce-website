@@ -12,6 +12,7 @@ const ProductCard = ({ product, flexDirection = "row" }: Props) => {
       className={styles.card}
       key={product.id}
       style={{ flexDirection: flexDirection }}
+      data-aos="fade-up"
     >
       <div className={styles.left}>
         {product.new && <span className={styles.new}>New Product</span>}

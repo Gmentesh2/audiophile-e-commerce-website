@@ -96,7 +96,7 @@ const ProductInfo = ({ product, category }: Props) => {
 
   return (
     <section className={styles.section}>
-      <div className={`${styles.infoContainer} container`}>
+      <div data-aos="fade-up" className={`${styles.infoContainer} container`}>
         <div className={styles.upperSection}>
           <button
             onClick={() => {

@@ -8,7 +8,7 @@ type Props = {
 const ProductGallery = ({ product }: Props) => {
   return (
     <div className={styles.gallery}>
-      <div className={`container ${styles.container}`}>
+      <div data-aos="fade-up" className={`container ${styles.container}`}>
         <div className={styles.imgContainer}>
           <img className={styles.first} src={`/${product?.gallery.first.desktop}`} alt="" />
           <img className={styles.second} src={`/${product?.gallery.second.desktop}`} alt="" />

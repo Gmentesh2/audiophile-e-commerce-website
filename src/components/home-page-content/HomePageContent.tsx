@@ -5,7 +5,7 @@ import Speakers from "./mini-components/Speaker"
 const HomePageContent = () => {
   return (
     <div className={styles.homePageContent}>
-        <div className={`container ${styles.contentContainer}`}  >
+        <div  className={`container ${styles.contentContainer}`}  >
             <Speakers />
             <Earphone />
         </div>

@@ -3,11 +3,12 @@ import headphonesImg from "../../assets/shared/desktop/image-category-thumbnail-
 import earphonesImg from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import speakersImg from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 import styles from "./thumbnail-section.module.css";
+
 const ThumbnailSection = () => {
   return (
     <section className={styles.section}>
       <div className={`container ${styles.sectionContainer}`}>
-        <article className={styles.card}>
+        <article data-aos="fade-up" className={styles.card}>
           <img src={headphonesImg} className={styles.headphonesIMG} alt="#" />
           <h3>Headphones</h3>
           <Link className={styles.link} to={"/products/headphones"}>
@@ -30,7 +31,7 @@ const ThumbnailSection = () => {
             </span>
           </Link>
         </article>
-        <article className={styles.card}>
+        <article data-aos="fade-up" className={styles.card}>
           <img src={speakersImg} alt="" />
           <h3>Speakers</h3>
           <Link className={styles.link} to={"/products/speakers"}>
@@ -52,7 +53,7 @@ const ThumbnailSection = () => {
             </span>
           </Link>
         </article>
-        <article className={styles.card}>
+        <article data-aos="fade-up" className={styles.card}>
           <img src={earphonesImg} alt="" />
           <h3>Earphones</h3>
           <Link className={styles.link} to={"/products/earphones"}>

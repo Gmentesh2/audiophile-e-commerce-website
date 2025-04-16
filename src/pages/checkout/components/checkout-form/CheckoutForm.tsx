@@ -27,7 +27,7 @@ const CheckoutForm = ({ register, errors }: Props) => {
   );
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return (
-    <div className={styles.form}>
+    <div data-aos="fade-up" className={styles.form}>
       <h1>CHECKOUT</h1>
       <h3 className={styles.inputHeading}>Billing Details</h3>
       <section className={`${styles.inputSection} ${styles.miniSection}`}>

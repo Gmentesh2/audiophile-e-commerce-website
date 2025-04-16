@@ -5,8 +5,8 @@ type Props = {
 
 const CategorySection = ({ category }: Props) => {
   return (
-    <section className={styles.section}>
-      <h2 className={styles.h}>{category}</h2>
+    <section  className={styles.section}>
+      <h2 data-aos="zoom-in-up" className={styles.h}>{category}</h2>
     </section>
   );
 };
