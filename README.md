@@ -1,11 +1,11 @@
 # React + TypeScript + Vite
 
-🎧 Audiophile E-Commerce Website
+ # 🎧 Audiophile E-Commerce Website
 
 Audiophile is a fully dynamic e-commerce website built with React, designed for selling premium earphones, headphones, and speakers.
 The project uses a local db.json file as a mock database to display product data dynamically across the site.
 
-🛠️ Features
+ # 🛠️ Features
 
 Dynamic product rendering from db.json
 
@@ -22,7 +22,7 @@ Smooth animations for UI transitions
 Form handling with React Hook Form
 Responsive design for all screen sizes
 
-🚀 How to Run
+# 🚀 How to Run
 
 Clone the repository
 
@@ -40,7 +40,7 @@ Start the React app
 
 npm start dev 
 
-📸 Preview
+# 📸 Preview
 
 <img width="1917" height="868" alt="Website image" src="https://github.com/user-attachments/assets/36c4c0cb-9f21-485b-a6dc-fb74d43d8489" />
 <img width="1912" height="867" alt="image-2" src="https://github.com/user-attachments/assets/93e16321-f273-409d-ad32-a2e9c2ec452b" />
