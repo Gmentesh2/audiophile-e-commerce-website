@@ -26,7 +26,7 @@ Responsive design for all screen sizes
 
 Clone the repository
 
-git clone https://github.com/yourusername/audiophile-ecommerce.git
+git clone [https://github.com/yourusername/audiophile-ecommerce.git](https://github.com/Gmentesh2/audiophile-e-commerce-website.git)
 
 Install dependencies
 
