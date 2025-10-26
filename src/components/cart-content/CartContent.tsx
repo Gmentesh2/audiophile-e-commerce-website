@@ -25,10 +25,16 @@ const CartContent = ({ setIsOpen }: Props) => {
   };
 
   if (context?.selectedItems?.length === 0) {
-    return <div className={styles.emptyCart}>
-      <img className={styles.emptyCartImage} src={emptyCartImage} alt="empty cart" />
-      <p>Your cart is empty</p>
-    </div>;
+    return (
+      <div className={styles.emptyCart}>
+        <img
+          className={styles.emptyCartImage}
+          src={emptyCartImage}
+          alt="empty cart"
+        />
+        <p>Your cart is empty</p>
+      </div>
+    );
   }
 
   return (

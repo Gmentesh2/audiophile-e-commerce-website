@@ -1,8 +1,6 @@
 import { Dispatch, SetStateAction, useContext } from "react";
-import {
-  SelectedItem,
-  SelectedProductsContext,
-} from "../../context/SelectedProductsContext";
+import { SelectedItem } from "../../context/SelectedProductsContextProvider";
+import { SelectedProductsContext } from "../../context/SelectedProductsContext";
 import styles from "./product-btn.module.css";
 import { Product } from "../../pages/products/Products";
 

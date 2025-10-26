@@ -6,8 +6,8 @@ import { useContext, useState } from "react";
 import {
   ContextType,
   SelectedItem,
-  SelectedProductsContext,
-} from "../../../../context/SelectedProductsContext";
+} from "../../../../context/SelectedProductsContextProvider";
+import { SelectedProductsContext } from "../../../../context/SelectedProductsContext";
 import orderConfirmation from "../../../../assets/checkout/icon-order-confirmation.svg";
 import ProductPreview from "../../../../components/product-preview/ProductPreview";
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 const customStyles = {
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.50)",
-  }
+  },
 };
 
 const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
@@ -60,7 +60,7 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
         isOpen={isOpen}
         ariaHideApp={false}
         style={customStyles}
-        className={styles.checkoutModal}         
+        className={styles.checkoutModal}
         onRequestClose={() => setIsOpen(false)}
       >
         <div className={styles.container}>
@@ -93,8 +93,10 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
                 }}
                 className={styles.showMoreBtn}
               >
-                 {viewLess
-                  ? `and ${(context?.selectedItems?.length ?? 0) - 1} other item(s)`
+                {viewLess
+                  ? `and ${
+                      (context?.selectedItems?.length ?? 0) - 1
+                    } other item(s)`
                   : "View less"}
               </button>
             </div>
@@ -117,7 +119,6 @@ const CheckoutModal = ({ isOpen, setIsOpen }: Props) => {
               navigate("/");
               setIsOpen(false);
             }}
-            
           >
             Back to home
           </button>

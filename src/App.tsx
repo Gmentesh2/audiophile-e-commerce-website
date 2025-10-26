@@ -1,6 +1,6 @@
 import "./App.css";
 import RoutesConfig from "./routes/Routes";
-import SelectedProductsContextProvider from "./context/SelectedProductsContext";
+import SelectedProductsContextProvider from "./context/SelectedProductsContextProvider";
 import useScrollToTop from "./hooks/useScrollToTop";
 import AOS from "aos";
 import "aos/dist/aos.css";

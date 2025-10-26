@@ -4,8 +4,8 @@ import styles from "./product-info.module.css";
 import ProductBtn from "../product-btn/ProductBtn";
 import {
   SelectedItem,
-  SelectedProductsContext,
-} from "../../context/SelectedProductsContext";
+} from "../../context/SelectedProductsContextProvider";
+import { SelectedProductsContext } from "../../context/SelectedProductsContext";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
