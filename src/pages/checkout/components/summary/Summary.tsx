@@ -4,9 +4,10 @@ import { SelectedProductsContext } from "../../../../context/SelectedProductsCon
 import ProductPreview from "../../../../components/product-preview/ProductPreview";
 type Props = {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  isValid?: boolean;
 };
 
-const Summary = ({ setIsOpen }: Props) => {
+const Summary = ({ setIsOpen, isValid }: Props) => {
   const context = useContext(SelectedProductsContext);
 
   const findTotalPrice = useMemo(() => {
@@ -28,7 +29,7 @@ const Summary = ({ setIsOpen }: Props) => {
   }, [findTotalPrice, costs.shipping, costs.VAT]);
 
   const handleContinueClick = () => {
-    if (context?.selectedItems?.length) {
+    if (isValid && context?.selectedItems?.length) {
       setIsOpen(true);
     }
   };
@@ -69,6 +70,10 @@ const Summary = ({ setIsOpen }: Props) => {
         className={`btn ${styles.summaryBtn}`}
         onClick={handleContinueClick}
         type="submit"
+        style={{
+          opacity: isValid ? 1 : 0.6,
+          cursor: isValid ? "pointer" : "not-allowed",
+        }}
       >
         CONTINUE
       </button>

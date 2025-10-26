@@ -22,7 +22,7 @@ const Checkout = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<FormData>({
     defaultValues: {
       name: "",
@@ -33,11 +33,11 @@ const Checkout = () => {
       city: "",
       country: "",
     },
+    mode: "onChange",
   });
   const onSubmit = () => {
     setModalIsOpen(true);
   };
-  console.log(errors);
   return (
     <main className={`${styles.main}`}>
       <div className={`container ${styles.checkoutPage}`}>
@@ -52,7 +52,7 @@ const Checkout = () => {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.checkoutContainer}>
             <CheckoutForm register={register} errors={errors} />
-            <Summary setIsOpen={setModalIsOpen} />
+            <Summary isValid={isValid} setIsOpen={setModalIsOpen} />
           </div>
         </form>
       </div>

@@ -60,10 +60,10 @@ const ProductBtn = ({ product, size = "medium", count, setCount }: Props) => {
 
   // clicking on plus //
   const handleClickPlus = () => {
-    if (!item) {
-      addNewProduct();
-    } else {
+    if (item) {
       updateProductAmount(1);
+    } else {
+      addNewProduct();
     }
   };
 

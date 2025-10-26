@@ -32,7 +32,7 @@ const CartContent = ({ setIsOpen }: Props) => {
           src={emptyCartImage}
           alt="empty cart"
         />
-        <p>Your cart is empty</p>
+        <b>Your cart is empty</b>
       </div>
     );
   }
